@@ -14,4 +14,4 @@ This directory contains initial version of ASC ros wrapper. This code works as f
     nodeTopic: lever_up_locations
     description: This is simple scene descriptor that shows where object leveruppable.
 ```
-4) When a node needs a model that gives Lever_Up_Mask(purposeId), it can connect to this node by parsing the NodeInfo List.
+4) When a node needs for example a model that gives Lever_Up_Mask(purposeId), it can connect to this node by parsing the NodeInfo List.

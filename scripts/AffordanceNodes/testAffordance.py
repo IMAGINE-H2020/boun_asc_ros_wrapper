@@ -27,8 +27,6 @@ def imageCallback(data):
     else:
         my_dict.pop('Lever_Uppable', None)
 
-
-
 def connectSc(data):
     global lever_up_location_pub
     possibleLeverUpMasks=list()
@@ -37,17 +35,12 @@ def connectSc(data):
             possibleLeverUpMasks.append(node)
     lever_up_location_sub=rospy.Subscriber(possibleLeverUpMasks[0].nodeTopic,Image,imageCallback)
 
-
-
 if __name__ == "__main__":
     rospy.init_node('DummyAffordanceDetector')
     rate = rospy.Rate(100)
     affordance_pub = rospy.Publisher("Affordances",String,queue_size=1)
     asc_pub = rospy.Publisher("/AffordancesNewNodeListener",NodeInfo,queue_size=1)
     asc_sub = rospy.Subscriber("/SceneDescriptorNodeLister",NodeList,connectSc)
-
-    #
-    #imageMsg=bridge.cv2_to_imgmsg(lever_up_mask, "bgr8")
 
     affordance_node=NodeInfo()
     affordance_node.nodeId='DummyAffordance'

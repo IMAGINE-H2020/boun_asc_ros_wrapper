@@ -27,7 +27,6 @@ class TopicWrapper:
             nodeList.nodeList.append(node)
         self.pub.publish(nodeList)
     def addNewNodeCallback(self,data):
-#        for data in datalist.nodeList:
         print ('here')
         newNode=nodeStruct(data.nodeId,data.purposeId,data.nodeTopic,data.description)
         if data.nodeId in self.nodeIdList:

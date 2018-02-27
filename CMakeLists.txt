@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(asc)
+project(boun_asc_ros_wrapper)
 
 
 find_package(catkin REQUIRED COMPONENTS
@@ -38,7 +38,7 @@ generate_messages(
 
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES asc
+#  LIBRARIES boun_asc_ros_wrapper
   CATKIN_DEPENDS roscpp rospy sensor_msgs std_msgs message_runtime
 #  DEPENDS system_lib
 )
